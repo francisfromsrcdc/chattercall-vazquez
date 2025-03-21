@@ -1,0 +1,18 @@
+{% extends "chat/base.html" %} {% load crispy_forms_tags %} {% block content %}
+<div class="content-section" class="centered-form"> 
+  <form method="POST" class="centered-form">
+    {% csrf_token %}
+    <fieldset class="form-group">
+      <legend class="border-bottom mb-4">
+        Join a chatroom
+      </legend>
+      {{ form|crispy }}
+    </fieldset>
+    <div class="form-group">
+      <button class="btn btn-outline-info" type="submit">
+        Start chatting with people
+      </button>
+    </div>
+  </form>
+</div>
+{% endblock content %}
